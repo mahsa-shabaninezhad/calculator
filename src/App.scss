@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+.claculator{
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    width: 70%;
+    max-width: 400px;
+    min-height: 400px;
+    margin: 5rem auto;
+}
