@@ -1,0 +1,25 @@
+.btn{
+    cursor: pointer;
+    padding: 1rem;
+    background-color: #C5FFFD;
+    border: 1px solid #a7ebe8;
+    font-size: 1rem;
+    
+    &:active{
+        background-color: darken(#C5FFFD,  3%);
+    }
+    &:focus{
+        outline: none;
+    }
+
+}
+
+
+.operator{
+    background-color: #88D9E6;
+    border: 1px solid #68c0ce;
+    
+    &:active{
+        background-color: darken(#88D9E6,  3%);
+    }
+}
