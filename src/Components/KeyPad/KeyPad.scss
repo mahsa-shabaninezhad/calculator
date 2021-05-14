@@ -1,0 +1,17 @@
+.key-pad{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: 100%;
+    border: 1px solid #68c0ce;
+    border-top: none;
+}
+
+.key-pad :first-child{
+    grid-column: span 2
+}
+.key-pad :nth-child(11){
+    grid-row: span 2
+}
+.key-pad :nth-child(15){
+    grid-column: span 3
+}
