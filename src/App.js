@@ -12,8 +12,6 @@ function App() {
   const handleCalculation = (op) => {
     switch (prevOp) {
       case '+':
-        console.log(curNum);
-        console.log(firstNum);
         setDisplay((Number(firstNum) + Number(curNum))+op)
         setFirstNum(Number(firstNum) + Number(curNum))
         break;
@@ -45,8 +43,6 @@ function App() {
   const handleEqualKey = () => {
     switch (prevOp) {
       case '+':
-        console.log(curNum);
-        console.log(firstNum);
         setDisplay(Number(firstNum) + Number(curNum))
         setCurNum(Number(firstNum) + Number(curNum))
         break;
@@ -79,31 +75,31 @@ function App() {
 
   const handleDisplay = (role, text) => {
     if(role === 'num'){
-      console.log(curNum);
       setDisplay(display => display === "0"? display = text : display += text);
       setCurNum(curNum => curNum === "0"? curNum = text : curNum += text);
+
     }else{
       if(text === "="){
-        console.log('equal clicked');
         handleEqualKey()
         setPrevOp(text)
+
       }else if(text === "C"){
-        console.log('clear clicked');
+        setCurNum('0')
+        setFirstNum('0')
+        setDisplay('0')
+        setPrevOp(null)
         
       }else{
-        console.log(curNum);
-        console.log(prevOp);
-        console.log('operator clicked');
         if(prevOp){
           if(prevOp === '='){
             setDisplay(display + text)
             setFirstNum(curNum)
             setCurNum('0')
+
           }else{
             setCurNum('0')
             handleCalculation(text)
           }          
-          
           setPrevOp(text)
           
         }else{
